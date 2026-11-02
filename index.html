@@ -290,7 +290,7 @@ $('#go').onclick=()=>{
   $('#go').textContent='\u062a\u0648\u0642\u0641';
   iv=setInterval(()=>{left--;$('#tm').textContent=fmt(left);document.title=fmt(left)+' \u00b7 \u06cc\u0627\u062f\u0645 \u0646\u0631\u0647';
     if(left<=0){clearInterval(iv);iv=null;document.title='\u06cc\u0627\u062f\u0645 \u0646\u0631\u0647';beep();
-      foc[TODAY]=(foc[TODAY]||0)+45;const t=tasks.find(x=>x.id===focusId);if(t){t.foc=(t.foc||0)+45;t.u=Date.now()};
+      foc[TODAY]=(foc[TODAY]||0)+25;const t=tasks.find(x=>x.id===focusId);if(t){t.foc=(t.foc||0)+25;t.u=Date.now()};
       $('#ft').textContent='\u06f2\u06f5 \u062f\u0642\u06cc\u0642\u0647 \u062a\u0645\u0631\u06a9\u0632 \u06a9\u0627\u0645\u0644 \u0634\u062f. \u06cc\u0647 \u0627\u0633\u062a\u0631\u0627\u062d\u062a \u0628\u06a9\u0646 \u2615';left=1500;$('#go').textContent='\u0634\u0631\u0648\u0639';save()}},1000);
 };
 function beep(){try{const c=new AudioContext(),o=c.createOscillator();o.connect(c.destination);o.frequency.value=660;o.start();o.stop(c.currentTime+.4)}catch(e){}}
